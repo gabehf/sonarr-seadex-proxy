@@ -83,3 +83,5 @@ Use these two together to find the releases marked by the proxy, then give them 
 ## Albums that fueled development
 
 Idk I just listened to random tracks off of my playlist, but you should [listen to OurR](https://www.youtube.com/watch?v=Kx0Uwa7kE78).
+
+Also if you like looking at music listening statistics and stuff you should check out my other project [Koito](https://github.com/gabehf/Koito).
