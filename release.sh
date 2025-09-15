@@ -6,7 +6,7 @@
 # commit changes
 # push commit
 # run script
-version=0.0.1
+version=0.0.2
 image_name=gabehf/sonarr-seadex-proxy
 
 git tag v$version

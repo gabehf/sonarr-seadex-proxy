@@ -72,7 +72,7 @@ var (
 
 // --- Main --- //
 func main() {
-	log.Println("SonarrSeaDexProxy v0.0.1")
+	log.Println("SonarrSeaDexProxy v0.0.2")
 	port := "6778"
 
 	http.HandleFunc("/api", apiHandler)
@@ -215,7 +215,7 @@ func handleTVSearch(w http.ResponseWriter, r *http.Request) {
 			Title: title,
 			GUID: GUID{
 				IsPerma: "false",
-				Value:   nyaa.GUID,
+				Value:   "seadex+" + nyaa.GUID,
 			},
 			Link:    br.DownloadURL,
 			Size:    br.Size,
