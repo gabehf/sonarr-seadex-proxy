@@ -22,10 +22,10 @@ jobs:
       # Build per-arch images
       - name: Build amd64 image
         run: |
-          docker build -t ${IMAGE_NAME}:${VERSION}-amd64 -f Dockerfile --build-arg ARCH=amd64 .
+          docker build --platform linux/amd64 -t ${IMAGE_NAME}:${VERSION}-amd64 -f Dockerfile --build-arg ARCH=amd64 .
       - name: Build arm64 image
         run: |
-          docker build -t ${IMAGE_NAME}:${VERSION}-arm64 -f Dockerfile --build-arg ARCH=arm64 .
+          docker build --platform linux/arm64 -t ${IMAGE_NAME}:${VERSION}-arm64 -f Dockerfile --build-arg ARCH=arm64 .
       - name: Push per-arch images
         run: |
           docker push ${IMAGE_NAME}:${VERSION}-amd64

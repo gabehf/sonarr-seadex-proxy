@@ -1,4 +1,4 @@
-FROM golang:1.24-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.24-alpine AS build
 ARG ARCH=amd64
 WORKDIR /build
 COPY main.go .
