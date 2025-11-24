@@ -6,5 +6,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=${ARCH} go build -o seadex-proxy main.go
 
 FROM scratch
 COPY --from=build /build/seadex-proxy /seadex-proxy
+COPY --from=build /etc/ssl/certs /etc/ssl/certs
 ENTRYPOINT ["/seadex-proxy"]
 EXPOSE 6778
